@@ -1,0 +1,77 @@
+BINARY TO DECIMAL
+n=1010
+i=0
+dec=0
+while(n!=0):
+    rem=n%10
+    dec+=pow(2,i)*rem
+    n//=10
+    i+=1
+print(dec)
+
+OCTAL TO DECIMAL
+n=357
+i=0
+dec=0
+while(n!=0):
+    rem=n%10
+    dec+=pow(8,i)*rem
+    n//=10
+    i+=1
+print(dec)
+
+DECIMAL TO OCTAL
+n=327
+octa=[]
+while(n>0):
+    octa.insert(0,n%8)
+    n//=8
+print("".join(str(x) for x in octa))
+
+
+HEXA DECIMAL TO DECIMAL
+
+hexa="1AB29F"
+dec=0
+pos=0
+for i in range(len(hexa)-1,-1,-1):
+    if "0"<=hexa[i]<="9":
+        digit=ord(hexa[i])-48
+        dec+=digit*pow(16,pos)
+        pos+=1
+    elif "A"<=hexa[i]<="F":
+        digit=ord(hexa[i])-55
+        dec+=digit*pow(16,pos)
+        pos+=1
+print(dec)
+
+
+ DECIMAL TO BINARY
+
+n=32
+bina=[]
+while(n>0):
+    bina.insert(0,n%2)
+    n//=2
+print("".join(str(x) for x in bina))
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
